@@ -38,11 +38,14 @@ docker run hello-world
 ### Prepare directories and fetch files
 ```
 mkdir /opt/compose-files/
-
+```
+```
 wget -o /opt/compose-files/ator.yaml /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/ator.yaml
-
+```
+```
 mkdir /opt/ator/etc/tor/
-
+```
+```
 wget -o /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/torrc
 ```
 
