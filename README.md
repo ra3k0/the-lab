@@ -4,9 +4,7 @@ https://www.debian.org/
 ## Install using the apt repository.
 ### 1. Set up Docker's apt repository.
 ```
-sudo apt-get update
-```
-```
+sudo apt-get update -y
 sudo apt-get upgrade -y
 ```
 ```
@@ -27,8 +25,6 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
-```
 sudo apt-get update
 ```
 ### 2. Install the Docker packages.
