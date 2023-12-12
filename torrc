@@ -1,0 +1,51 @@
+# Run Tor as a regular user (do not change this)
+User atord
+DataDirectory /var/lib/tor
+
+ControlPort 9051
+ControlSocket /run/tor/control
+ControlSocketsGroupWritable 1
+CookieAuthentication 1
+CookieAuthFile /run/tor/control.authcookie
+CookieAuthFileGroupReadable 1
+
+#Logging
+#Log notice file /etc/tor/notices.log
+
+# Server's public IP Address (usually automatic)
+#Address 10.10.10.10
+
+# Port to advertise for incoming Tor connections.
+ORPort 9101          # common ports are 9001, 443
+#ORPort [IPv6-address]:9001
+
+# Mirror directory information for others (optional, not used on bridge)
+DirPort 9030                 # common ports are 9030, 80
+
+# Run Tor only as a server (no local applications)
+SocksPort 0
+#ControlSocket 0
+
+# Run as a relay only (change policy to enable exit node)
+ExitPolicy reject *:*        # no exits allowed
+ExitPolicy reject6 *:*
+ExitRelay 0
+IPv6Exit 0
+
+# Set limits
+#AccountingMax 40 TB
+#RelayBandwidthRate 10 MB   # Throttle traffic to
+#RelayBandwidthBurst 12 MB # But allow bursts up to
+#MaxMemInQueues 1433 MB       # 70% of 2Gb RAM
+
+# https://trac.torproject.org/projects/tor/wiki/doc/PluggableTransports/obfs4proxy
+## Run Tor as obfuscated bridge
+#ServerTransportPlugin obfs4 exec /usr/local/bin/obfs4proxy
+#ServerTransportListenAddr obfs4  0.0.0.0:54444
+#ExtORPort auto
+#BridgeRelay 1
+
+## If no Nickname or ContactInfo is set, docker-entrypoint will use
+## the environment variables to add Nickname/ContactInfo below
+Nickname ATORrelay          # only use letters and numbers
+ContactInfo exmaple@mail.com
