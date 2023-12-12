@@ -1,6 +1,7 @@
 ## Install Debian (CLI Only).
 https://www.debian.org/
 
+##Install Docker
 ## Install using the apt repository.
 ### 1. Set up Docker's apt repository.
 ```
@@ -39,6 +40,16 @@ usermod -aG docker $USER
 ```
 docker run hello-world
 ```
+
+```
+mkdir /opt/compose-files/ator.yaml
+wget -o /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/ator.yaml
+
+mkdir /opt/ator/etc/tor
+wget -o /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/torrc
+```
+
+
 # Resources:
 
 https://www.debian.org/
