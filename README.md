@@ -1,4 +1,3 @@
-# the-lab
 ## Install Debian (CLI Only).
 https://www.debian.org/
 
