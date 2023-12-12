@@ -1,0 +1,17 @@
+version: '2.2'
+services:
+  relay:
+    image: svforte/ator-protocol
+    container_name: ator-relay
+    init: true
+    restart: unless-stopped
+    ports:
+      - "9101:9101"
+      - "9030:9030"
+      #- "9051:9051" #Optional port for NYX
+    volumes:
+      # mount and DataDirectory and custom `torrc` here
+      # please make sure that `torrc` is present in the working directory: `cp config/torrc-example torrc`
+      - /opt/ator/var/lib/tor/:/var/lib/tor/
+      - /opt/ator/etc/tor/:/etc/tor/
+      #- /run/tor/:/run/tor/ #Optional dir for NYX
