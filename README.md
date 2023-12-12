@@ -1,7 +1,7 @@
 ## Install Debian (CLI Only).
 https://www.debian.org/
 
-##Install Docker
+## Install Docker
 ## Install using the apt repository.
 ### 1. Set up Docker's apt repository.
 ```
