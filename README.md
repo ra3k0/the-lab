@@ -5,7 +5,6 @@ This tutorial help Atornauts test and experiment with a docker container to set 
 Put your testing-helmets on and let's begin.. and remember to run the code blocks as is. use the "copy" button next to the blocks (don't change it unless spceifically testing for other distros or various reasons)
 
 #### Install Debian 12 (Bookworm)  on a VPS server of your choice. (CLI version Only)
-#### (edit: testing shows that it works on Debian 11 (Bullseye) as well..)
 
 https://www.debian.org/
 
