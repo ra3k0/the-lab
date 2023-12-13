@@ -1,7 +1,7 @@
-## Install Debian (CLI Only).
+## Install Debian 12 (CLI Only).
 https://www.debian.org/
 
-## Elevate to sudo
+## Make sure you are root
 ```
 sudo su
 ```
