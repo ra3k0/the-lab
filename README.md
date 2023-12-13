@@ -43,6 +43,10 @@ mkdir -p /opt/ator/etc/tor/
 wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/torrc
 touch /opt/ator/etc/tor/notices.log
 chown 100:101 /opt/ator/etc/tor/notices.log
+chown 700 /opt/ator/etc/tor/notices.log
+mkdir -p /run/tor/
+chown -R 100:101 /run/tor/
+chmod -R 700 /run/tor/
 ```
 
 ### Create and start Docker container
@@ -51,12 +55,10 @@ docker compose -f /opt/compose-files/ator.yaml up -d
 docker ps
 ```
 
-### Experimental: Optional for NYX
+### Install and run NYX
 ```
-mkdir -p /run/tor/
-chown -R 100:101 /run/tor/
-chmod -R 700 /run/tor/
 apt install nyx
+nyx
 ```
 
 
