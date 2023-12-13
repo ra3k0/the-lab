@@ -42,8 +42,8 @@ wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the
 mkdir -p /opt/ator/etc/tor/
 wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/torrc
 touch /opt/ator/etc/tor/notices.log
+chown messagebus:crontab /opt/ator/etc/tor/notices.log
 chown 100:101 /opt/ator/etc/tor/notices.log
-chown 700 /opt/ator/etc/tor/notices.log
 mkdir -p /run/tor/
 chown -R 100:101 /run/tor/
 chmod -R 700 /run/tor/
