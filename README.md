@@ -69,8 +69,14 @@ nyx
 ### Usage
 ```
 docker logs ator-relay
+```
+```
 tail -f /opt/ator/etc/tor/notices.log
+```
+```
 docker restart ator-relay
+```
+```
 docker rm ator-relay --force
 ```
 
