@@ -64,7 +64,7 @@ apt-get install nyx -y
 nyx
 ```
 
-# Resources:
+## Resources:
 
 https://www.debian.org/
 
