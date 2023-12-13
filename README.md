@@ -7,7 +7,7 @@ sudo su
 ```
 
 ## Install Docker using the apt repository.
-### 1. Set up Docker's apt repository.
+### Set up Docker's apt repository.
 ```
 apt-get update -y
 apt-get upgrade -y
@@ -26,7 +26,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
 ```
-### 2. Install the Docker packages.
+### Install the Docker packages.
 ```
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
@@ -34,7 +34,7 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docke
 ```
 usermod -aG docker $USER
 ```-->
-### 3. Verify that the installation is successful by running the hello-world image:
+### Verify that the installation is successful by running the hello-world image:
 ```
 docker run hello-world
 ```
@@ -63,8 +63,6 @@ docker ps
 apt-get install nyx -y
 nyx
 ```
-
-
 
 
 # Resources:
