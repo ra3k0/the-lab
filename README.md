@@ -79,6 +79,7 @@ apt-get install nyx -y
 nyx -s /opt/ator/run/tor/control
 ```
 
+
 ## Done!
 
 ### Useful commands for testing and monitoring:
