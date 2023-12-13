@@ -13,4 +13,4 @@ services:
       # please make sure that `torrc` is present in the working directory: `cp config/torrc-example torrc`
       - /opt/ator/var/lib/tor/:/var/lib/tor/
       - /opt/ator/etc/tor/:/etc/tor/
-      - /run/tor/:/run/tor/ #Optional dir for NYX
+      #- /run/tor/:/run/tor/ #Optional dir for NYX
