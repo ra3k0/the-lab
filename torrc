@@ -10,7 +10,7 @@ CookieAuthFile /run/tor/control.authcookie
 CookieAuthFileGroupReadable 1
 
 #Logging
-#Log notice file /etc/tor/notices.log
+Log notice file /etc/tor/notices.log
 
 # Server's public IP Address (usually automatic)
 #Address 10.10.10.10
