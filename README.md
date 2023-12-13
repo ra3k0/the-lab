@@ -46,6 +46,7 @@ wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/
 ### Create and start Docker container
 
 ```
+cd /opt/compose-files/
 docker compose up -f /opt/compose-files/ator.yaml -d
 ```
 
