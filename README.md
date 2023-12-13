@@ -47,7 +47,7 @@ wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/
 
 ```
 cd /opt/compose-files/
-docker compose up -f /opt/compose-files/ator.yaml -d
+docker compose -f /opt/compose-files/ator.yaml up -d
 ```
 
 # Resources:
