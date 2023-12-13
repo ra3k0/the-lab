@@ -6,7 +6,7 @@ services:
     init: true
     restart: unless-stopped
     ports:
-      - "9101:9101"
+      - "9001:9001"
       - "9030:9030"
     volumes:
       # mount and DataDirectory and custom `torrc` here
