@@ -58,8 +58,8 @@ docker compose -f /opt/compose-files/ator.yaml up -d
 docker ps
 ```
 
-#### Install and run NYX
-<!--```
+<!--#### Install and run NYX
+```
 apt-get install nyx -y
 nyx
 ```-->
