@@ -70,8 +70,6 @@ https://www.debian.org/
 
 https://docs.docker.com/engine/install/debian/
 
-https://docs.docker.com/compose/install/linux/#install-using-the-repository
-
 https://hub.docker.com/r/svforte/ator-protocol
 
 https://github.com/ATOR-Development/ator-protocol/blob/main/docker/docker-compose.yaml
