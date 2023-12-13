@@ -6,7 +6,7 @@ https://www.debian.org/
 sudo su
 ```
 
-## 1. Install Docker using the apt repository.
+## Install Docker using the apt repository.
 ### Set up Docker's apt repository.
 ```
 apt-get update -y
@@ -26,7 +26,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
 ```
-### 2. Install the Docker packages.
+### Install the Docker packages.
 ```
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
@@ -39,7 +39,7 @@ usermod -aG docker $USER
 docker run hello-world
 ```
 
-### 3. Prepare directories and fetch files
+### Prepare directories and fetch files
 ```
 mkdir /opt/compose-files/
 wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/ator.yaml
@@ -52,18 +52,17 @@ chown -R 100:101 /run/tor/
 chmod -R 700 /run/tor/
 ```
 
-### 4. Create and start Docker container
+### Create and start Docker container
 ```
 docker compose -f /opt/compose-files/ator.yaml up -d
 docker ps
 ```
 
-### 5. Install and run NYX
+### Install and run NYX
 ```
 apt-get install nyx -y
 nyx
 ```
-
 
 # Resources:
 
