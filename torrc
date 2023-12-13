@@ -2,6 +2,7 @@
 User atord
 DataDirectory /var/lib/tor
 
+#Optional for NYX
 ControlSocket /run/tor/control
 ControlSocketsGroupWritable 1
 CookieAuthentication 1
