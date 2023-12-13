@@ -47,10 +47,13 @@ mkdir -p /opt/ator/etc/tor/
 wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/torrc
 touch /opt/ator/etc/tor/notices.log
 chown 100:101 /opt/ator/etc/tor/notices.log
+<!--mkdir -p /opt/ator/run/tor/
+chown -R 100:101 /opt/ator/run/tor/
+chmod -R 700 /opt/ator/run/tor/
+mkdir -p /root/.nyx/
+wget -O /root/.nyx/config
+https://raw.githubusercontent.com/rA3ka/the-lab/main/config
 ```
-<!--mkdir -p /run/tor/
-chown -R 100:101 /run/tor/
-chmod -R 700 /run/tor/-->
 
 #### Create and start Docker container
 ```
@@ -61,7 +64,7 @@ docker ps
 <!--#### Install and run NYX
 ```
 apt-get install nyx -y
-nyx
+nyx -s /opt/ator/run/tor/control
 ```-->
 
 ## Done!
