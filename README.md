@@ -51,8 +51,7 @@ mkdir -p /opt/ator/run/tor/
 chown -R 100:101 /opt/ator/run/tor/
 chmod -R 700 /opt/ator/run/tor/
 mkdir -p /root/.nyx/
-wget -O /root/.nyx/config
-https://raw.githubusercontent.com/rA3ka/the-lab/main/config
+wget -O /root/.nyx/config https://raw.githubusercontent.com/rA3ka/the-lab/main/config
 ```
 
 #### Create and start Docker container
