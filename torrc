@@ -3,11 +3,11 @@ User atord
 DataDirectory /var/lib/tor
 
 #ControlPort 9051
-#ControlSocket /run/tor/control
-#ControlSocketsGroupWritable 1
-#CookieAuthentication 1
-#CookieAuthFile /run/tor/control.authcookie
-#CookieAuthFileGroupReadable 1
+ControlSocket /run/tor/control
+ControlSocketsGroupWritable 1
+CookieAuthentication 1
+CookieAuthFile /run/tor/control.authcookie
+CookieAuthFileGroupReadable 1
 
 #Logging
 #Log notice file /etc/tor/notices.log
