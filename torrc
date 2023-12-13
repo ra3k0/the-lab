@@ -33,7 +33,7 @@ IPv6Exit 0
 #AccountingMax 40 TB
 #RelayBandwidthRate 10 MB   # Throttle traffic to
 #RelayBandwidthBurst 12 MB # But allow bursts up to
-#MaxMemInQueues 1433 MB       # 70% of 2Gb RAM
+#MaxMemInQueues 1855 MB       # 90% of 2Gb RAM
 
 # https://trac.torproject.org/projects/tor/wiki/doc/PluggableTransports/obfs4proxy
 ## Run Tor as obfuscated bridge
