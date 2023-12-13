@@ -1,9 +1,16 @@
 # Instructions on how to install ATOR relay in Docker container.
+This tutorial help Atornauts test and experiment with a docker container to set up a new ATOR relay in preparation and testing for the new Ator network
 
-## Install Debian 12 (CLI Only).
+## Before starting:
+Put your testing-helmets on and let's begin.. and remember to run the code blocks as is. use the "copy" button next to the blocks (don't change it unless spcifically testing for other distros or various reasons)
+
+#### Install Debian 12 (Bookworm)  on a VPS server of your choice. (CLI version Only)
 https://www.debian.org/
 
-## Make sure you are root
+
+
+## Instructions for docker and relay setup:
+### !!! Make sure you are running this tutorial as 'root' !!!
 ```
 sudo su
 ```
@@ -74,19 +81,25 @@ nyx -s /opt/ator/run/tor/control
 
 ## Done!
 
-### Usage:
+### Useful commands for testing and monitoring:
+
+#### start nyx with control file
 ```
 nyx -s /opt/ator/run/tor/control
 ```
+#### check systemctl logs of the container
 ```
 docker logs ator-relay
 ```
+#### tail the log to monitor it live
 ```
 tail -f /opt/ator/etc/tor/notices.log
 ```
+#### restart the relay container
 ```
 docker restart ator-relay
 ```
+#### delete the relay container
 ```
 docker rm ator-relay --force
 ```
