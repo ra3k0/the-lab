@@ -45,10 +45,10 @@ docker run hello-world
 ```
 mkdir /opt/compose-files/
 wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/ator.yaml
-mkdir -p /opt/ator/tor/
-wget -O /opt/ator/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/torrc
-touch /opt/ator/tor/notices.log
-chown 100:101 /opt/ator/tor/notices.log
+mkdir -p /opt/ator/etc/tor/
+wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/torrc
+touch /opt/ator/etc/tor/notices.log
+chown 100:101 /opt/ator/etc/tor/notices.log
 mkdir -p /opt/ator/run/tor/
 chown -R 100:101 /opt/ator/run/tor/
 chmod -R 700 /opt/ator/run/tor/
