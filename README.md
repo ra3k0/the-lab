@@ -51,10 +51,10 @@ docker ps
 
 ### Experimental: Optional for NYX
 ```
-apt install nyx
 mkdir -p /run/tor/
 chown -R 100:101 /run/tor/
 chmod -R 700 /run/tor/
+apt install nyx
 ```
 
 
