@@ -5,14 +5,14 @@ https://www.debian.org/
 ## Install using the apt repository.
 ### 1. Set up Docker's apt repository.
 ```
-sudo apt-get update -y
-sudo apt-get upgrade -y
+apt-get update -y
+apt-get upgrade -y
 ```
 ```
-sudo apt-get install ca-certificates curl gnupg -y
-sudo install -m 0755 -d /etc/apt/keyrings
+apt-get install ca-certificates curl gnupg -y
+install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
+chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 #### Add the repository to Apt sources:
 ```
@@ -20,15 +20,15 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
+apt-get update
 ```
 ### 2. Install the Docker packages.
 ```
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
 <!--### Optional, requires relogin
 ```
-sudo usermod -aG docker $USER
+usermod -aG docker $USER
 ```-->
 ### 3. Verify that the installation is successful by running the hello-world image:
 ```
@@ -56,7 +56,7 @@ docker ps
 
 ### Install and run NYX
 ```
-apt install nyx -y
+apt-get install nyx -y
 nyx
 ```
 
