@@ -7,7 +7,7 @@ sudo su
 ```
 
 ## Install Docker using the apt repository.
-### Set up Docker's apt repository.
+#### Set up Docker's apt repository.
 ```
 apt-get update -y
 apt-get upgrade -y
@@ -26,7 +26,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
 ```
-### Install the Docker packages.
+#### Install the Docker packages.
 ```
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
@@ -34,12 +34,12 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docke
 ```
 usermod -aG docker $USER
 ```-->
-### Verify that the installation is successful by running the hello-world image:
+#### Verify that the installation is successful by running the hello-world image:
 ```
 docker run hello-world
 ```
 
-### Prepare directories and fetch files
+#### Prepare directories and fetch files
 ```
 mkdir /opt/compose-files/
 wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/ator.yaml
@@ -52,13 +52,13 @@ chown -R 100:101 /run/tor/
 chmod -R 700 /run/tor/
 ```
 
-### Create and start Docker container
+#### Create and start Docker container
 ```
 docker compose -f /opt/compose-files/ator.yaml up -d
 docker ps
 ```
 
-### Install and run NYX
+#### Install and run NYX
 ```
 apt-get install nyx -y
 nyx
