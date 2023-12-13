@@ -66,7 +66,7 @@ docker ps
 ```
 apt-get install nyx -y
 ```
-#### Always run Nyx with this cmd
+##### Always run Nyx with this cmd
 ```
 nyx -s /opt/ator/run/tor/control
 ```
