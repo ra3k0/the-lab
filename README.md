@@ -49,6 +49,16 @@ wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/
 docker compose -f /opt/compose-files/ator.yaml up -d
 ```
 
+### Optional for NYX
+mkdir -p /run/tor/
+
+chown -R 100:101 /run/tor/
+
+chmod -R 700 /run/tor/
+
+
+
+
 # Resources:
 
 https://www.debian.org/
