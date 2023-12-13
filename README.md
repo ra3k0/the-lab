@@ -66,7 +66,7 @@ nyx
 
 ## Done!
 
-### Usage
+### Usage:
 ```
 docker logs ator-relay
 ```
