@@ -8,11 +8,8 @@ CookieAuthentication 1
 CookieAuthFile /run/tor/control.authcookie
 CookieAuthFileGroupReadable 1
 
-#Logging
+# Logging
 Log notice file /etc/tor/notices.log
-
-# Server's public IP Address (usually automatic)
-#Address 10.10.10.10
 
 # Port to advertise for incoming Tor connections.
 ORPort 9101          # common ports are 9001, 443
@@ -44,7 +41,7 @@ IPv6Exit 0
 #ExtORPort auto
 #BridgeRelay 1
 
-## If no Nickname or ContactInfo is set, docker-entrypoint will use
-## the environment variables to add Nickname/ContactInfo below
+
+## Keep Nickname and ContactInfo as it is
 Nickname ATORNr1Relay          # only use letters and numbers
 ContactInfo atornaut@relay.up
