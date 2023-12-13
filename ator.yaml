@@ -8,7 +8,6 @@ services:
     ports:
       - "9101:9101"
       - "9030:9030"
-      #- "9051:9051" #Optional port for NYX
     volumes:
       # mount and DataDirectory and custom `torrc` here
       # please make sure that `torrc` is present in the working directory: `cp config/torrc-example torrc`
