@@ -26,10 +26,10 @@ sudo apt-get update
 ```
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
-### Optional, requires relogin
+<!--### Optional, requires relogin
 ```
 sudo usermod -aG docker $USER
-```
+```-->
 ### 3. Verify that the installation is successful by running the hello-world image:
 ```
 docker run hello-world
