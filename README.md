@@ -56,7 +56,7 @@ docker ps
 
 ### Install and run NYX
 ```
-apt install nyx
+apt install nyx -y
 nyx
 ```
 
