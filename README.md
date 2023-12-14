@@ -84,11 +84,11 @@ nyx -s /opt/ator/run/tor/control
 ```
 nyx -s /opt/ator/run/tor/control
 ```
-#### check systemctl logs of Tor service
+#### Check systemctl logs for Tor service
 ```
 docker logs ator-relay
 ```
-#### Monitor log
+#### Monitor Tor log
 ```
 tail -f /opt/ator/etc/tor/notices.log
 ```
