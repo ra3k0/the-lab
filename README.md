@@ -5,7 +5,7 @@ This tutorial help Atornauts test and experiment with a docker container to set 
 
 https://www.debian.org/
 
-## Make sure you are running this tutorial as 'root' !
+## Make sure you are doing the install as 'root' !
 ```
 sudo su
 ```
