@@ -11,7 +11,6 @@ sudo su
 ```
 
 ## Instructions for docker and relay setup:
-### Install Docker using the apt repository
 #### Set up Docker's apt repository
 ```
 apt-get update -y
