@@ -78,25 +78,25 @@ nyx -s /opt/ator/run/tor/control
 
 ## Done!
 
-### Useful commands for testing and monitoring:
+### Commands for testing and monitoring:
 
-#### start nyx with control file
+#### Start nyx with control file
 ```
 nyx -s /opt/ator/run/tor/control
 ```
-#### check systemctl logs of the container
+#### check systemctl logs of Tor service
 ```
 docker logs ator-relay
 ```
-#### tail the log to monitor it live
+#### Monitor log
 ```
 tail -f /opt/ator/etc/tor/notices.log
 ```
-#### restart the relay container
+#### Restart the relay container
 ```
 docker restart ator-relay
 ```
-#### delete the relay container
+#### Remove the relay container
 ```
 docker rm ator-relay --force
 ```
