@@ -8,7 +8,7 @@ https://www.debian.org/
 
 
 ## Instructions for docker and relay setup:
-### !!! Make sure you are running this tutorial as 'root' !!!
+### Make sure you are running this tutorial as 'root' !
 ```
 sudo su
 ```
