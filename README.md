@@ -5,12 +5,12 @@ This tutorial help Atornauts test and experiment with a docker container to set 
 
 https://www.debian.org/
 
-## Instructions for docker and relay setup:
-### Make sure you are running this tutorial as 'root' !
+## Make sure you are running this tutorial as 'root' !
 ```
 sudo su
 ```
 
+## Instructions for docker and relay setup:
 ## Install Docker using the apt repository.
 #### Set up Docker's apt repository.
 ```
