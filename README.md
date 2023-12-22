@@ -112,7 +112,7 @@ https://github.com/ATOR-Development/ator-protocol/blob/main/docker/docker-compos
 
 https://github.com/ATOR-Development/ator-protocol/blob/11f734c0a9df1bc6b2316d70da834a77224a9805/docker/config/torrc-example
 
-## Contributors
+## Collaborators
 
 <table>
   <tbody>
