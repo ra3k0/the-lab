@@ -1,8 +1,6 @@
 # How to install ATOR relay as Docker container
 This tutorial help Atornauts test and experiment with a docker container to set up a new ATOR relay in preparation and testing for the new Ator network
 
-**Important!** This docker image will be built with dummy directory authorities, production ready DAs will be introduced later.
-
 ## Install a fresh Debian 12 Bookworm (CLI Only)
 
 https://www.debian.org/
