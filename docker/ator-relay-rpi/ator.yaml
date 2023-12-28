@@ -1,0 +1,14 @@
+version: '2.2'
+services:
+  relay:
+    image: svforte/ator-protocol-arm64:latest
+    container_name: ator-relay
+    init: true
+    restart: unless-stopped
+    ports:
+      - "9001:9001"
+      - "9030:9030"
+    volumes:
+      - /opt/ator/var/lib/tor/:/var/lib/tor/
+      - /opt/ator/etc/tor/:/etc/tor/
+      - /opt/ator/run/tor/:/run/tor/ #Optional dir for NYX
