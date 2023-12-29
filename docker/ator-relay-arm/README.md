@@ -2,7 +2,7 @@
 ### This is experimental and untested and might brake during install!
 
 ## Install a fresh Debian 12 Bookworm. 
-### Use 64-bit version. CLI only install is recommended.
+#### Use 64-bit version. CLI only install is recommended.
 
 https://www.debian.org/
 
