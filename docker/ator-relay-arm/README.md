@@ -1,7 +1,8 @@
 # How to install ATOR relay as Docker container for ARM-64 devices. 
 ### This is experimental and untested and might brake during install!
 
-## Install a fresh Debian 12 Bookworm. Use 64-bit version. CLI only install is recommended.
+## Install a fresh Debian 12 Bookworm. 
+### Use 64-bit version. CLI only install is recommended.
 
 https://www.debian.org/
 
