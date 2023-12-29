@@ -1,5 +1,5 @@
 # How to install ATOR relay as Docker container 
-### Not for use on arm64 devices
+#### Not for use on arm64 devices
 This tutorial help Atornauts test and experiment with a docker container to set up a new ATOR relay in preparation and testing for the new Ator network
 
 ## Install a fresh Debian 12 Bookworm (CLI Only)
