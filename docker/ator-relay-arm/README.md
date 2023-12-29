@@ -99,6 +99,15 @@ docker restart ator-relay
 ```
 docker rm ator-relay --force
 ```
+#### Verify 64 or 32 bit OS
+##### Install lswh
+```
+apt install lshw
+```
+##### looks for "64 bits"
+```
+lshw | head -6 
+```
 
 ## Resources:
 
