@@ -104,7 +104,7 @@ docker rm ator-relay --force
 ```
 apt install lshw
 ```
-##### looks for "64 bits"
+##### Look for "64 bits"
 ```
 lshw | head -6 
 ```
