@@ -109,6 +109,12 @@ apt install lshw
 ```
 lshw | head -6 
 ```
+#### Update relay to run latest version
+```
+docker container rm --force ator-relay
+docker pull svforte/ator-protocol:latest
+docker compose -f /opt/compose-files/ator.yaml up -d
+```
 
 ## Resources:
 
