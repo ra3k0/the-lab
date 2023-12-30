@@ -84,6 +84,15 @@ docker container rm --force ator-relay
 docker pull svforte/ator-protocol:latest
 docker compose -f /opt/compose-files/ator.yaml up -d
 ```
+#### Verify 64 or 32 bit OS
+##### Install lswh
+```
+apt install lshw
+```
+##### Look for "64 bits"
+```
+lshw | head -6 
+```
 
 ### Commands for testing and monitoring:
 
@@ -106,15 +115,6 @@ docker restart ator-relay
 #### Remove the relay container
 ```
 docker rm ator-relay --force
-```
-#### Verify 64 or 32 bit OS
-##### Install lswh
-```
-apt install lshw
-```
-##### Look for "64 bits"
-```
-lshw | head -6 
 ```
 
 ## Resources:
