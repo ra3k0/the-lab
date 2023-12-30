@@ -90,7 +90,7 @@ nyx -s /opt/ator/run/tor/control
 #### Update relay to run latest version
 ```
 docker container rm --force ator-relay
-docker pull svforte/ator-protocol:latest
+docker pull svforte/ator-protocol-arm64:latest
 docker compose -f /opt/compose-files/ator.yaml up -d
 ```
 
