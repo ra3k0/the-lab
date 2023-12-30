@@ -84,7 +84,8 @@ docker container rm --force ator-relay
 docker pull svforte/ator-protocol:latest
 docker compose -f /opt/compose-files/ator.yaml up -d
 ```
-#### Verify 64 or 32 bit OS
+
+### Verify 64 or 32 bit OS
 ##### Install lswh
 ```
 apt install lshw
