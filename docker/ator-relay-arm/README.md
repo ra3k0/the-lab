@@ -78,12 +78,15 @@ nyx -s /opt/ator/run/tor/control
 
 ## Done!
 
-### Update relay to run latest version
+### Commands for updating, testing and monitoring:
+
+#### Update relay to run latest version
 ```
 docker container rm --force ator-relay
 docker pull svforte/ator-protocol:latest
 docker compose -f /opt/compose-files/ator.yaml up -d
 ```
+
 
 ### Verify 64 or 32 bit OS
 ##### Install lswh
