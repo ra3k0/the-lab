@@ -11,6 +11,13 @@ https://www.debian.org/
 sudo su
 ```
 
+## Install firewall and add allow rules for SSH and ORport
+```
+apt install ufw -y
+ufw allow 22,9001/tcp
+ufw enable
+```
+
 ## Instructions for docker and relay setup:
 #### Set up Docker's apt repository
 ```
