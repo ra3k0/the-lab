@@ -78,14 +78,14 @@ nyx -s /opt/ator/run/tor/control
 
 ## Done!
 
+### Commands for updating, testing and monitoring:
+
 #### Update relay to run latest version
 ```
 docker container rm --force ator-relay
 docker pull svforte/ator-protocol:latest
 docker compose -f /opt/compose-files/ator.yaml up -d
 ```
-
-### Commands for testing and monitoring:
 
 #### Start nyx with control file
 ```
