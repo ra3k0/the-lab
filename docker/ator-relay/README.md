@@ -54,7 +54,7 @@ docker run hello-world
 #### Prepare directories and fetch files
 ```
 mkdir /opt/compose-files/
-wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/ator.yaml
+wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/relay.yaml
 mkdir -p /opt/anon/etc/tor/
 wget -O /opt/anon/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/anonrc
 touch /opt/anon/etc/tor/notices.log
@@ -79,7 +79,7 @@ apt-get install nyx -y
 ```
 #### Always run Nyx with this cmd
 ```
-nyx -s /opt/anon/run/tor/control
+nyx -s /opt/anon/run/anon/control
 ```
 
 
@@ -96,7 +96,7 @@ docker compose -f /opt/compose-files/ator.yaml up -d
 
 #### Start nyx with control file
 ```
-nyx -s /opt/ator/run/tor/control
+nyx -s /opt/anon/run/anon/control
 ```
 #### Check systemctl logs for Tor service
 ```
@@ -104,7 +104,7 @@ docker logs ator-relay
 ```
 #### Monitor Tor log
 ```
-tail -f /opt/ator/etc/tor/notices.log
+tail -f /opt/ator/etc/anon/notices.log
 ```
 #### Restart the relay container
 ```
