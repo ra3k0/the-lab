@@ -89,7 +89,7 @@ nyx -s /opt/anon/run/anon/control
 
 #### Update relay to run latest version
 ```
-docker container rm --force anon-relay
+docker container rm --force ator-relay
 docker pull svforte/anon-dev:latest
 docker compose -f /opt/compose-files/relay.yaml up -d
 ```
@@ -100,7 +100,7 @@ nyx -s /opt/anon/run/anon/control
 ```
 #### Check systemctl logs for Tor service
 ```
-docker logs anon-relay
+docker logs ator-relay
 ```
 #### Monitor Tor log
 ```
@@ -108,11 +108,11 @@ tail -f /opt/anon/etc/anon/notices.log
 ```
 #### Restart the relay container
 ```
-docker restart anon-relay
+docker restart ator-relay
 ```
 #### Remove the relay container
 ```
-docker rm anon-relay --force
+docker rm ator-relay --force
 ```
 
 ## Resources:
