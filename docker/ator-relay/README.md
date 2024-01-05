@@ -54,14 +54,14 @@ docker run hello-world
 #### Prepare directories and fetch files
 ```
 mkdir /opt/compose-files/
-wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/relay.yaml
+wget -O /opt/compose-files/relay.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/relay.yaml
 mkdir -p /opt/anon/etc/tor/
 wget -O /opt/anon/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/anonrc
-touch /opt/anon/etc/tor/notices.log
+touch /opt/anon/etc/anon/notices.log
 chown 100:101 /opt/anon/etc/tor/notices.log
 mkdir -p /opt/anon/run/tor/
-chown -R 100:101 /opt/anon/run/tor/
-chmod -R 700 /opt/anon/run/tor/
+chown -R 100:101 /opt/anon/run/anon/
+chmod -R 700 /opt/anon/run/anon/
 mkdir -p /root/.nyx/
 wget -O /root/.nyx/config https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/config
 useradd -M anond
@@ -69,7 +69,7 @@ useradd -M anond
 
 #### Create and start Docker container
 ```
-docker compose -f /opt/compose-files/ator.yaml up -d
+docker compose -f /opt/compose-files/relay.yaml up -d
 docker ps
 ```
 
@@ -91,7 +91,7 @@ nyx -s /opt/anon/run/anon/control
 ```
 docker container rm --force ator-relay
 docker pull svforte/anon-dev:latest
-docker compose -f /opt/compose-files/ator.yaml up -d
+docker compose -f /opt/compose-files/relay.yaml up -d
 ```
 
 #### Start nyx with control file
@@ -104,7 +104,7 @@ docker logs ator-relay
 ```
 #### Monitor Tor log
 ```
-tail -f /opt/ator/etc/anon/notices.log
+tail -f /opt/anon/etc/anon/notices.log
 ```
 #### Restart the relay container
 ```
