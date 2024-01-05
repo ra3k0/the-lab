@@ -55,16 +55,16 @@ docker run hello-world
 ```
 mkdir /opt/compose-files/
 wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/ator.yaml
-mkdir -p /opt/ator/etc/tor/
-wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/torrc
-touch /opt/ator/etc/tor/notices.log
-chown 100:101 /opt/ator/etc/tor/notices.log
-mkdir -p /opt/ator/run/tor/
-chown -R 100:101 /opt/ator/run/tor/
-chmod -R 700 /opt/ator/run/tor/
+mkdir -p /opt/anon/etc/tor/
+wget -O /opt/anon/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/torrc
+touch /opt/anon/etc/tor/notices.log
+chown 100:101 /opt/anon/etc/tor/notices.log
+mkdir -p /opt/anon/run/tor/
+chown -R 100:101 /opt/anon/run/tor/
+chmod -R 700 /opt/anon/run/tor/
 mkdir -p /root/.nyx/
 wget -O /root/.nyx/config https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/config
-useradd -M atord
+useradd -M anond
 ```
 
 #### Create and start Docker container
@@ -79,7 +79,7 @@ apt-get install nyx -y
 ```
 #### Always run Nyx with this cmd
 ```
-nyx -s /opt/ator/run/tor/control
+nyx -s /opt/anon/run/tor/control
 ```
 
 
@@ -90,7 +90,7 @@ nyx -s /opt/ator/run/tor/control
 #### Update relay to run latest version
 ```
 docker container rm --force ator-relay
-docker pull svforte/ator-protocol:latest
+docker pull svforte/anon-dev:latest
 docker compose -f /opt/compose-files/ator.yaml up -d
 ```
 
@@ -121,13 +121,11 @@ https://www.debian.org/
 
 https://docs.docker.com/engine/install/debian/
 
-https://hub.docker.com/r/svforte/ator-protocol
+https://hub.docker.com/u/svforte
 
 https://github.com/ATOR-Development/ator-protocol/blob/main/docker/docker-compose.yaml
 
-https://github.com/ATOR-Development/ator-protocol/blob/main/docker/config/torrc-example
-
-https://github.com/ATOR-Development/ator-protocol/blob/11f734c0a9df1bc6b2316d70da834a77224a9805/docker/config/torrc-example
+https://github.com/ATOR-Development/ator-protocol/blob/main/docker/config/anonrc-example
 
 ## Collaborators
 
