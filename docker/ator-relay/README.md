@@ -56,7 +56,7 @@ docker run hello-world
 mkdir /opt/compose-files/
 wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/ator.yaml
 mkdir -p /opt/anon/etc/tor/
-wget -O /opt/anon/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/torrc
+wget -O /opt/anon/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/anonrc
 touch /opt/anon/etc/tor/notices.log
 chown 100:101 /opt/anon/etc/tor/notices.log
 mkdir -p /opt/anon/run/tor/
