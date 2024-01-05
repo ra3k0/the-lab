@@ -1,16 +1,16 @@
 # Run Tor as a regular user (do not change this)
-User atord
-DataDirectory /var/lib/tor
+User anond
+DataDirectory /var/lib/anon
 
 #Optional for NYX
-ControlSocket /run/tor/control
+ControlSocket /run/anon/control
 ControlSocketsGroupWritable 1
 CookieAuthentication 1
-CookieAuthFile /run/tor/control.authcookie
+CookieAuthFile /run/anon/control.authcookie
 CookieAuthFileGroupReadable 1
 
 # Logging
-Log notice file /etc/tor/notices.log
+Log notice file /etc/anon/notices.log
 
 # Server's public IP Address (usually automatic)
 #Address 10.10.10.10
@@ -47,5 +47,5 @@ IPv6Exit 0
 
 
 ## Keep Nickname and ContactInfo as it is
-Nickname ATORNr1Relay          # only use letters and numbers
+Nickname ANONRelay          # only use letters and numbers
 ContactInfo atornaut@relay.up
