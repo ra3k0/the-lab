@@ -54,22 +54,22 @@ docker run hello-world
 #### Prepare directories and fetch files
 ```
 mkdir /opt/compose-files/
-wget -O /opt/compose-files/ator.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay-arm/ator.yaml
-mkdir -p /opt/ator/etc/tor/
-wget -O /opt/ator/etc/tor/torrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/torrc
-touch /opt/ator/etc/tor/notices.log
-chown 100:101 /opt/ator/etc/tor/notices.log
-mkdir -p /opt/ator/run/tor/
-chown -R 100:101 /opt/ator/run/tor/
-chmod -R 700 /opt/ator/run/tor/
+wget -O /opt/compose-files/relay.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay-arm/relay.yaml
+mkdir -p /opt/anon/etc/anon/
+wget -O /opt/anon/etc/anon/anonrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/anonrc
+touch /opt/anon/etc/anon/notices.log
+chown 100:101 /opt/anon/etc/anon/notices.log
+mkdir -p /opt/anon/run/anon/
+chown -R 100:101 /opt/anon/run/anon/
+chmod -R 700 /opt/anon/run/anon/
 mkdir -p /root/.nyx/
 wget -O /root/.nyx/config https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/config
-useradd -M atord
+useradd -M anond
 ```
 
 #### Create and start Docker container
 ```
-docker compose -f /opt/compose-files/ator.yaml up -d
+docker compose -f /opt/compose-files/relay.yaml up -d
 docker ps
 ```
 
@@ -79,19 +79,19 @@ apt-get install nyx -y
 ```
 #### Always run Nyx with this cmd
 ```
-nyx -s /opt/ator/run/tor/control
+nyx -s /opt/aanon/run/anon/control
 ```
 
 
 ## Done!
 
-### Commands for updating, testing and monitoring:
+### Commands for updating, testing and monianoning:
 
 #### Update relay to run latest version
 ```
 docker container rm --force ator-relay
-docker pull svforte/ator-protocol-arm64:latest
-docker compose -f /opt/compose-files/ator.yaml up -d
+docker pull svforte/anon-dev:latest
+docker compose -f /opt/compose-files/relay.yaml up -d
 ```
 
 
@@ -109,7 +109,7 @@ lshw | head -6
 
 #### Start nyx with control file
 ```
-nyx -s /opt/ator/run/tor/control
+nyx -s /opt/anon/run/anon/control
 ```
 #### Check systemctl logs for Tor service
 ```
@@ -117,7 +117,7 @@ docker logs ator-relay
 ```
 #### Monitor Tor log
 ```
-tail -f /opt/ator/etc/tor/notices.log
+tail -f /opt/anon/etc/anon/notices.log
 ```
 #### Restart the relay container
 ```
@@ -134,13 +134,11 @@ https://www.debian.org/
 
 https://docs.docker.com/engine/install/debian/
 
-https://hub.docker.com/r/svforte/ator-protocol
+https://hub.docker.com/u/svforte
 
 https://github.com/ATOR-Development/ator-protocol/blob/main/docker/docker-compose.yaml
 
-https://github.com/ATOR-Development/ator-protocol/blob/main/docker/config/torrc-example
-
-https://github.com/ATOR-Development/ator-protocol/blob/11f734c0a9df1bc6b2316d70da834a77224a9805/docker/config/torrc-example
+https://github.com/ATOR-Development/ator-protocol/blob/main/docker/config/anonrc-example
 
 ## Collaborators
 
