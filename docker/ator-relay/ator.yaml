@@ -10,5 +10,5 @@ services:
       - "9030:9030"
     volumes:
       - /opt/anon/var/lib/anon/:/var/lib/anon/
-      - /opt/anon/etc/non/:/etc/anon/
+      - /opt/anon/etc/anon/:/etc/anon/
       - /opt/anon/run/anon/:/run/anon/ #Optional dir for NYX
