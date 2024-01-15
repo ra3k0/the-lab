@@ -2,7 +2,7 @@
 #### Not for use on arm64 devices
 This tutorial help Atornauts test and experiment with a docker container to set up a new ATOR relay in preparation and testing for the new Ator network
 
-## Install a fresh Debian 12 Bookworm (CLI Only)
+### Install a fresh Debian 12 Bookworm (CLI Only)
 
 https://www.debian.org/
 
@@ -23,7 +23,7 @@ ufw allow 22,9001/tcp
 ufw enable
 ```
 
-## Instructions for docker and relay setup:
+### Instructions for docker and relay setup:
 #### Set up Docker's apt repository
 ```
 apt-get install ca-certificates curl gnupg -y
