@@ -10,6 +10,11 @@ https://www.debian.org/
 ```
 sudo su
 ```
+## Update repos
+```
+apt-get update -y
+apt-get upgrade -y
+```
 
 ## Install firewall and add allow rules for SSH and ORport
 ```
@@ -20,10 +25,6 @@ ufw enable
 
 ## Instructions for docker and relay setup:
 #### Set up Docker's apt repository
-```
-apt-get update -y
-apt-get upgrade -y
-```
 ```
 apt-get install ca-certificates curl gnupg -y
 install -m 0755 -d /etc/apt/keyrings
