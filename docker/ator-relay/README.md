@@ -23,7 +23,7 @@ ufw allow 22,9001/tcp
 ufw enable
 ```
 
-### Instructions for docker and relay setup:
+## Instructions for docker and relay setup:
 #### Set up Docker's apt repository
 ```
 apt-get install ca-certificates curl gnupg -y
