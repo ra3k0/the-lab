@@ -6,12 +6,17 @@
 
 https://www.debian.org/
 
-## Make sure you are doing the install as 'root' !
+### Make sure you are doing the install as 'root' !
 ```
 sudo su
 ```
+### Update system
+```
+apt-get update -y
+apt-get upgrade -y
+```
 
-## Install firewall and add allow rules for SSH and ORport
+### Install firewall and add allow rules for SSH and ORport
 ```
 apt install ufw -y
 ufw allow 22,9001/tcp
@@ -20,10 +25,6 @@ ufw enable
 
 ## Instructions for docker and relay setup:
 #### Set up Docker's apt repository
-```
-apt-get update -y
-apt-get upgrade -y
-```
 ```
 apt-get install ca-certificates curl gnupg -y
 install -m 0755 -d /etc/apt/keyrings
