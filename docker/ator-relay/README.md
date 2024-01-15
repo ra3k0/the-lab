@@ -10,7 +10,7 @@ https://www.debian.org/
 ```
 sudo su
 ```
-### Update repos
+### Update system
 ```
 apt-get update -y
 apt-get upgrade -y
