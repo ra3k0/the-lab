@@ -6,17 +6,17 @@ This tutorial help Atornauts test and experiment with a docker container to set 
 
 https://www.debian.org/
 
-## Make sure you are doing the install as 'root' !
+### Make sure you are doing the install as 'root' !
 ```
 sudo su
 ```
-## Update repos
+### Update repos
 ```
 apt-get update -y
 apt-get upgrade -y
 ```
 
-## Install firewall and add allow rules for SSH and ORport
+### Install firewall and add allow rules for SSH and ORport
 ```
 apt install ufw -y
 ufw allow 22,9001/tcp
