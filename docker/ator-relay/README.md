@@ -1,5 +1,7 @@
-# How to install ATOR relay as Docker container 
+# How to install ATOR relay as Docker container
+
 #### Not for use on arm64 devices
+
 This tutorial help Atornauts test and experiment with a docker container to set up a new ATOR relay in preparation and testing for the new Ator network
 
 ### Install a fresh Debian 12 Bookworm (CLI Only)
@@ -7,16 +9,20 @@ This tutorial help Atornauts test and experiment with a docker container to set 
 https://www.debian.org/
 
 ### Make sure you are doing the install as 'root' !
-```
+
+```bash
 sudo su
 ```
+
 ### Update system
+
 ```
 apt-get update -y
 apt-get upgrade -y
 ```
 
 ### Install firewall and add allow rules for SSH and ORport
+
 ```
 apt install ufw -y
 ufw allow 22
@@ -25,14 +31,18 @@ ufw enable
 ```
 
 ## Instructions for docker and relay setup:
+
 #### Set up Docker's apt repository
+
 ```
 apt-get install ca-certificates curl gnupg -y
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 chmod a+r /etc/apt/keyrings/docker.gpg
 ```
+
 #### Add the repository to Apt sources:
+
 ```
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
@@ -40,12 +50,15 @@ echo \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
 ```
+
 #### Install the Docker packages
+
 ```
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
 
 #### Prepare directories and fetch files
+
 ```
 mkdir /opt/compose-files/
 wget -O /opt/compose-files/relay.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/relay.yaml
@@ -62,52 +75,66 @@ useradd -M anond
 ```
 
 #### Create and start Docker container
+
 ```
 docker compose -f /opt/compose-files/relay.yaml up -d
 ```
 
 #### Install NYX
+
 ```
 apt-get install nyx -y
 ```
+
 #### Always run Nyx with this cmd
+
 ```
 nyx -s /opt/anon/run/anon/control
 ```
-
 
 ## Done!
 
 ### Commands for updating, testing and monitoring:
 
 #### Edit relay configuration
+
 ```
 nano /opt/anon/etc/anon/anonrc
 ```
 
 #### Update relay to run latest version
+
 ```
 docker container rm --force ator-relay
 docker compose -f /opt/compose-files/relay.yaml up -d
 ```
 
 #### Start nyx with control file
+
 ```
 nyx -s /opt/anon/run/anon/control
 ```
+
 #### Check systemctl logs for Tor service
+
 ```
 docker logs ator-relay
 ```
+
 #### Monitor Tor log
+
 ```
 tail -f /opt/anon/etc/anon/notices.log
 ```
+
 #### Restart the relay container
+
 ```
 docker restart ator-relay
 ```
+
 #### Remove the relay container
+
 ```
 docker rm ator-relay --force
 ```
@@ -126,12 +153,5 @@ https://github.com/ATOR-Development/ator-protocol/blob/main/docker/config/anonrc
 
 ## Creators
 
-<table>
-  <tbody>
-    <tr>
-       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ra3ka"><img src="https://avatars.githubusercontent.com/u/72023964?v=4" width="100px;" alt="ra3ka"/><br /><b>rA3ka</b></a><br /></td>
-       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cl0ten"><img src="https://avatars.githubusercontent.com/u/143603910?v=4" width="100px;" alt="cl0ten"/><br /><b>cl0ten</b></a><br /></td>
-    </tr>
-  </tbody>
-</table>
-
+| <p><a href="https://github.com/ra3ka"><img src="https://avatars.githubusercontent.com/u/72023964?v=4" alt="ra3ka"><br>rA3ka</a><br></p> | <p><a href="https://github.com/cl0ten"><img src="https://avatars.githubusercontent.com/u/143603910?v=4" alt="cl0ten"><br>cl0ten</a><br></p> |
+| :-------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
