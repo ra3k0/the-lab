@@ -82,7 +82,7 @@ nyx -s /opt/aanon/run/anon/control
 #### Update relay to run latest version
 ```
 docker container rm --force ator-relay
-docker pull svforte/anon-dev:latest
+docker pull svforte/anon-dev-arm64:latest
 docker compose -f /opt/compose-files/relay.yaml up -d
 ```
 
