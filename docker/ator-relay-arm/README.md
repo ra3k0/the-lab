@@ -99,7 +99,7 @@ lshw | head -6
 
 ### Commands for testing and monitoring:
 
-#### Edit relay comfiguration
+#### Edit relay configuration
 ```
 nano /opt/anon/etc/anon/anonrc
 ```
