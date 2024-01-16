@@ -144,8 +144,6 @@ https://github.com/ATOR-Development/ator-protocol/blob/main/docker/docker-compos
 
 https://github.com/ATOR-Development/ator-protocol/blob/main/docker/config/anonrc-example
 
-## Collaborators
-
 ## Creators
 
 <table>
