@@ -87,7 +87,6 @@ nano /opt/anon/etc/anon/anonrc
 #### Update relay to run latest version
 ```
 docker container rm --force ator-relay
-docker pull svforte/anon-dev:latest
 docker compose -f /opt/compose-files/relay.yaml up -d
 ```
 
