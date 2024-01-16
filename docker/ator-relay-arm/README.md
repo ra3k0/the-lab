@@ -146,7 +146,7 @@ https://github.com/ATOR-Development/ator-protocol/blob/main/docker/config/anonrc
 
 ## Collaborators
 
-## Collaborators
+## Creators
 
 <table>
   <tbody>
