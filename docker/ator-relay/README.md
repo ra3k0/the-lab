@@ -136,9 +136,9 @@ https://github.com/ATOR-Development/ator-protocol/blob/main/docker/config/anonrc
 <table>
   <tbody>
     <tr>
-     <td align="center" valign="top" width="14.28%"><a href="https://github.com/cl0ten"><img src="https://avatars.githubusercontent.com/u/143603910?v=4" width="100px;" alt="cl0ten"/><br /><b>cl0ten</b></a><br /></td>
-     <td align="center" valign="top" width="14.28%"><a href="https://github.com/ra3ka"><img src="https://avatars.githubusercontent.com/u/72023964?v=4" width="100px;" alt="ra3ka"/><br /><b>rA3ka</b></a><br /></td>
-          </tr>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ra3ka"><img src="https://avatars.githubusercontent.com/u/72023964?v=4" width="100px;" alt="ra3ka"/><br /><b>rA3ka</b></a><br /></td>
+       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cl0ten"><img src="https://avatars.githubusercontent.com/u/143603910?v=4" width="100px;" alt="cl0ten"/><br /><b>cl0ten</b></a><br /></td>
+    </tr>
   </tbody>
 </table>
 
