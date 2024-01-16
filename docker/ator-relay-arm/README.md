@@ -100,7 +100,9 @@ lshw | head -6
 ### Commands for testing and monitoring:
 
 #### Edit relay comfiguration
-`nano /opt/anon/etc/anon/anonrc`
+```
+nano /opt/anon/etc/anon/anonrc
+```
 
 #### Start nyx with control file
 ```
