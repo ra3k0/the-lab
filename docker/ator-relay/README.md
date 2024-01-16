@@ -79,8 +79,10 @@ nyx -s /opt/anon/run/anon/control
 
 ### Commands for updating, testing and monitoring:
 
-#### Edit relay comfiguration
-`nano /opt/anon/etc/anon/anonrc`
+#### Edit relay configuration
+```
+nano /opt/anon/etc/anon/anonrc
+```
 
 #### Update relay to run latest version
 ```
