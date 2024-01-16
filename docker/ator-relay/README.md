@@ -43,14 +43,6 @@ apt-get update
 ```
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
-<!--### Optional, requires relogin
-```
-usermod -aG docker $USER
-```-->
-#### Verify that the installation is successful by running the hello-world image:
-```
-docker run hello-world
-```
 
 #### Prepare directories and fetch files
 ```
@@ -71,7 +63,6 @@ useradd -M anond
 #### Create and start Docker container
 ```
 docker compose -f /opt/compose-files/relay.yaml up -d
-docker ps
 ```
 
 #### Install NYX
