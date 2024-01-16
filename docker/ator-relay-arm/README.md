@@ -19,7 +19,8 @@ apt-get upgrade -y
 ### Install firewall and add allow rules for SSH and ORport
 ```
 apt install ufw -y
-ufw allow 22,9001/tcp
+ufw allow 22
+ufw allow 9001
 ufw enable
 ```
 
