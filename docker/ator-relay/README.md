@@ -26,7 +26,7 @@ apt-get upgrade -y
 ```
 apt install ufw -y
 ufw allow 22
-ufw 9001
+ufw allow 9001
 ufw enable
 ```
 
