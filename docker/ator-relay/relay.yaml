@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   relay:
-    image: svforte/anon-dev:latest
+    image: svforte/anon-stage:latest
     container_name: ator-relay
     init: true
     restart: unless-stopped
