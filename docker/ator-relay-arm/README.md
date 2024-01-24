@@ -72,7 +72,7 @@ apt-get install nyx -y
 ```
 #### Always run Nyx with this cmd
 ```
-nyx -s /opt/aanon/run/anon/control
+nyx -s /opt/anon/run/anon/control
 ```
 
 
