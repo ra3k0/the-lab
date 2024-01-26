@@ -12,9 +12,6 @@ CookieAuthFileGroupReadable 1
 # Logging
 Log notice file /etc/anon/notices.log
 
-# Server's public IP Address (usually automatic)
-#Address 10.10.10.10
-
 # Port to advertise for incoming Tor connections.
 ORPort 9001          # common ports are 9001, 443
 #ORPort [IPv6-address]:9001
@@ -49,3 +46,5 @@ IPv6Exit 0
 ## Keep Nickname and ContactInfo as it is
 Nickname ANONRelay          # only use letters and numbers
 ContactInfo atornaut@relay.up
+
+#MyFamily
