@@ -21,30 +21,20 @@ ORPort 9001          # common ports are 9001, 443
 
 # Run Tor only as a server (no local applications)
 SocksPort 0
-#ControlSocket 0
 
 # Run as a relay only (change policy to enable exit node)
-ExitPolicy reject *:*        # no exits allowed
+ExitPolicy reject *:* 
 ExitPolicy reject6 *:*
 ExitRelay 0
 IPv6Exit 0
 
 # Set limits
 #AccountingMax 40 TB
-#RelayBandwidthRate 10 MB   # Throttle traffic to
-#RelayBandwidthBurst 12 MB # But allow bursts up to
-#MaxMemInQueues 1855 MB       # 90% of 2Gb RAM
+#RelayBandwidthRate 10 MB      # Throttle traffic to
+#RelayBandwidthBurst 12 MB     # But allow bursts up to
+#MaxMemInQueues 1855 MB        # 90% of 2Gb RAM
 
-# https://trac.torproject.org/projects/tor/wiki/doc/PluggableTransports/obfs4proxy
-## Run Tor as obfuscated bridge
-#ServerTransportPlugin obfs4 exec /usr/local/bin/obfs4proxy
-#ServerTransportListenAddr obfs4  0.0.0.0:54444
-#ExtORPort auto
-#BridgeRelay 1
-
-
-## Keep Nickname and ContactInfo as it is
-Nickname ANONRelay          # only use letters and numbers
+Nickname ANONRelay    #Between 1-19 characters, only [a-zA-Z0-9] and no spaces.
 Contactinfo Anon <anon AT example DOT com>
 
 #MyFamily
