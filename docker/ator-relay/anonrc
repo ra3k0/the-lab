@@ -45,6 +45,6 @@ IPv6Exit 0
 
 ## Keep Nickname and ContactInfo as it is
 Nickname ANONRelay          # only use letters and numbers
-ContactInfo atornaut@relay.up
+Contactinfo Anon <anon AT example DOT com>
 
 #MyFamily
