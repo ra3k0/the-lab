@@ -1,4 +1,4 @@
-# Run Tor as a regular user (do not change this)
+# Run Anon as a regular user (do not change this)
 User anond
 DataDirectory /var/lib/anon
 
@@ -12,14 +12,14 @@ CookieAuthFileGroupReadable 1
 # Logging
 Log notice file /etc/anon/notices.log
 
-# Port to advertise for incoming Tor connections.
+# Port to advertise for incoming Anon connections.
 ORPort 9001          # common ports are 9001, 443
 #ORPort [IPv6-address]:9001
 
 # Mirror directory information for others (optional, not used on bridge)
 #DirPort 9030                 # common ports are 9030, 80
 
-# Run Tor only as a server (no local applications)
+# Run Anon only as a server (no local applications)
 SocksPort 0
 
 # Run as a relay only (change policy to enable exit node)
