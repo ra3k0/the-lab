@@ -6,7 +6,7 @@ sudo nano /etc/anon/anonrc
 ```
 ### Add SocksPort and SocksPolicy to anon configuration
 ```
-SocksPort 192.168.1.16:9050
+SocksPort 192.168.1.10:9050
 SocksPolicy accept 192.168.1.0/24
 ```
 ### Add allow rule for LAN subnet
