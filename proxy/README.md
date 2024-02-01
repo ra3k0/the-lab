@@ -9,7 +9,7 @@ sudo nano /etc/anon/anonrc
 SocksPort 192.168.1.10:9050
 SocksPolicy accept 192.168.1.0/24
 ```
-### Add allow rule for LAN subnet
+### Add allow rule for LAN subnet to SocksPort
 ```
 ufw allow from 192.168.1.0/24 proto tcp to any port 9050
 ```
