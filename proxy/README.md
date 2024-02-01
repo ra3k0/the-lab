@@ -13,3 +13,5 @@ SocksPolicy accept 192.168.1.0/24
 ```
 ufw allow from 192.168.1.0/24 proto tcp to any port 9050
 ```
+### Configure proxy for browser
+<figure><img src="./Firefox proxy settings.png" alt="" width=""><figcaption></figcaption></figure>
