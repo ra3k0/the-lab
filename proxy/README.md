@@ -1,6 +1,6 @@
 # Configure Socks5 proxy for anon relay
 
-### edit anon configuration
+### Edit anon configuration
 ```
 sudo nano /etc/anon/anonrc
 ```
