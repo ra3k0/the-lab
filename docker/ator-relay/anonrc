@@ -30,8 +30,8 @@ IPv6Exit 0
 
 # Set limits
 #AccountingMax 40 TB
-#RelayBandwidthRate 10 MB      # Throttle traffic to
-#RelayBandwidthBurst 12 MB     # But allow bursts up to
+#RelayBandwidthRate 80 Mbit      # Throttle traffic to
+#RelayBandwidthBurst 100 Mbit     # But allow bursts up to
 #MaxMemInQueues 1855 MB        # 90% of 2Gb RAM
 
 Nickname ANONRelay    #Between 1-19 characters, only [a-zA-Z0-9] and no spaces.
