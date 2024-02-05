@@ -1,31 +1,23 @@
-# How to install ATOR relay as Docker container
+# How to install ATOR relay as Docker container for Debian & Ubuntu
 
 This tutorial help Atornauts test and experiment with a docker container to set up a new ATOR relay in preparation and testing for the new Ator network. This instruction works for both amd64 and arm64 (Such as Raspberry Pi).
 
-### Install a fresh Debian 12 Bookworm (CLI Only)
 
-https://www.debian.org/
-
-### Make sure you are doing the install as 'root' !
-
-```bash
-sudo su
-```
-
-### Update system
+### Update system and install packages
 
 ```
-apt-get update -y
-apt-get upgrade -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install nyx -y
+sudo apt-get install ufw -y
 ```
 
-### Install firewall and add allow rules for SSH and ORport
+### Enable firewall and add allow rules for SSH and ORport
 
 ```
-apt install ufw -y
-ufw allow 22
-ufw allow 9001
-ufw enable
+sudo ufw allow 22
+sudo ufw allow 9001
+sudo ufw enable
 ```
 
 ## Instructions for docker and relay setup:
@@ -33,61 +25,51 @@ ufw enable
 #### Set up Docker's apt repository
 
 ```
-apt-get install ca-certificates curl gnupg -y
-install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-chmod a+r /etc/apt/keyrings/docker.gpg
-```
-
-#### Add the repository to Apt sources:
-
-```
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  tee /etc/apt/sources.list.d/docker.list > /dev/null
-apt-get update
+sudo apt-get install ca-certificates curl gnupg -y 
+sudo install -m 0755 -d /etc/apt/keyrings
+. /etc/os-release
+sudo curl -fsSL https://download.docker.com/linux/$ID/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+sudo echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/$ID \
+  $(. /etc/os-release && sudo echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 ```
 
 #### Install the Docker packages
 
 ```
-apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
 
 #### Prepare directories and fetch files
 
 ```
-mkdir /opt/compose-files/
-wget -O /opt/compose-files/relay.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/relay.yaml
-mkdir -p /opt/anon/etc/anon/
-wget -O /opt/anon/etc/anon/anonrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/anonrc
-touch /opt/anon/etc/anon/notices.log
-chown 100:101 /opt/anon/etc/anon/notices.log
-mkdir -p /opt/anon/run/anon/
-chown -R 100:101 /opt/anon/run/anon/
-chmod -R 700 /opt/anon/run/anon/
-mkdir -p /root/.nyx/
-wget -O /root/.nyx/config https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/config
-useradd -M anond
+sudo mkdir /opt/compose-files/
+sudo mkdir -p /opt/anon/etc/anon/
+sudo mkdir -p /opt/anon/run/anon/
+sudo mkdir -p /root/.nyx/
+sudo chmod -R 700 /opt/anon/run/anon/
+sudo chown -R 100:101 /opt/anon/run/anon/
+sudo touch /opt/anon/etc/anon/notices.log
+sudo chown 100:101 /opt/anon/etc/anon/notices.log
+sudo useradd -M anond
+sudo wget -O /opt/compose-files/relay.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/relay.yaml
+sudo wget -O /opt/anon/etc/anon/anonrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/anonrc
+sudo wget -O /root/.nyx/config https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/config
 ```
 
 #### Create and start Docker container
 
 ```
-docker compose -f /opt/compose-files/relay.yaml up -d
+sudo docker compose -f /opt/compose-files/relay.yaml up -d
 ```
 
-#### Install NYX
+#### Start Nyx to monitor the Relay
 
 ```
-apt-get install nyx -y
-```
-
-#### Always run Nyx with this cmd
-
-```
-nyx -s /opt/anon/run/anon/control
+sudo nyx -s /opt/anon/run/anon/control
 ```
 
 ## Done!
