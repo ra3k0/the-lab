@@ -1,4 +1,4 @@
-## Introduction to Linux Command Line for Beginners
+## Introduction to Linux Command Line
 
 ### 1. Getting Started:
    - Open a Terminal: This is your gateway to the command line.
