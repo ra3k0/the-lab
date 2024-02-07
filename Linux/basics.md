@@ -39,10 +39,9 @@
    - `free -m`: Display RAM usage.
    - `top`: Display real-time system information, including processes and resource usage.
 
-### 8. Package Management:
-   - `apt` or `yum`: Package managers for installing, updating, and removing software.
-     - `sudo apt-get update` to update package lists.
-     - `sudo apt-get install package_name` to install a package.
+### 8. Package Management: 
+   - `sudo apt-get update` to update package lists.
+   - `sudo apt-get install package_name` to install a package.
 
 ### 9. Searching for Files:
    - `find`: Search for files and directories. e.g., `find / -name filename`
