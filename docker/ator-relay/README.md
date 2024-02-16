@@ -86,6 +86,7 @@ nano /opt/anon/etc/anon/anonrc
 
 ```
 docker container rm --force ator-relay
+docker pull svforte/anon-stage:latest
 docker compose -f /opt/compose-files/relay.yaml up -d
 ```
 
