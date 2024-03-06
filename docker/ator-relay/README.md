@@ -96,13 +96,13 @@ docker compose -f /opt/compose-files/relay.yaml up -d
 nyx -s /opt/anon/run/anon/control
 ```
 
-#### Check systemctl logs for Tor service
+#### Check systemctl logs for Anon service
 
 ```
 docker logs ator-relay
 ```
 
-#### Monitor Tor log
+#### Monitor Anon log
 
 ```
 tail -f /opt/anon/etc/anon/notices.log
