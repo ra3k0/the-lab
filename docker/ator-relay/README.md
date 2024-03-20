@@ -55,9 +55,9 @@ sudo chown -R 100:101 /opt/anon/run/anon/
 sudo touch /opt/anon/etc/anon/notices.log
 sudo chown 100:101 /opt/anon/etc/anon/notices.log
 sudo useradd -M anond
-sudo wget -O /opt/compose-files/relay.yaml https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/relay.yaml
-sudo wget -O /opt/anon/etc/anon/anonrc https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/anonrc
-sudo wget -O /root/.nyx/config https://raw.githubusercontent.com/rA3ka/the-lab/main/docker/ator-relay/config
+sudo wget -O /opt/compose-files/relay.yaml https://raw.githubusercontent.com/rA3k0/the-lab/main/docker/ator-relay/relay.yaml
+sudo wget -O /opt/anon/etc/anon/anonrc https://raw.githubusercontent.com/rA3k0/the-lab/main/docker/ator-relay/anonrc
+sudo wget -O /root/.nyx/config https://raw.githubusercontent.com/rA3k0/the-lab/main/docker/ator-relay/config
 ```
 
 #### Create and start Docker container
