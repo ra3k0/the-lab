@@ -10,4 +10,4 @@ services:
     volumes:
       - /opt/anon/var/lib/anon/:/var/lib/anon/
       - /opt/anon/etc/anon/:/etc/anon/
-      - /opt/anon/run/anon/:/run/anon/ #Optional dir for NYX
+      - /opt/anon/run/anon/:/run/anon/ #Optional directory for NYX
